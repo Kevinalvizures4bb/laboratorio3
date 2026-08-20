@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SMILE FIT | Registrarse</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+                <span class="logo-icon">SF</span>
+                SMILE FIT
+            </a>
+
+            <button class="menu-btn" id="menuBtn">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+
+                <li>
+                    <a href="index.html">INICIO</a>
+                </li>
+
+                <li>
+                    <a href="servicios.html">SERVICIOS</a>
+                </li>
+
+                <li>
+                    <a href="productos.html">PRODUCTOS</a>
+                </li>
+
+                <li>
+                    <a href="clientes.html">CLIENTES</a>
+                </li>
+
+                <li>
+                    <a href="registrarse.html" class="active">REGISTRARSE</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="register-section">
+
+            <div class="register-container">
+
+                <div class="register-info">
+
+                    <p class="subtitle">
+                        ÚNETE A SMILE FIT
+                    </p>
+
+                    <h1>
+                        COMIENZA
+                        <span>HOY</span>
+                    </h1>
+
+                    <p>
+                        Completa tus datos para formar parte
+                        de SMILE FIT y comenzar tu camino
+                        hacia una vida más saludable.
+                    </p>
+
+                    <div class="info-list">
+
+                        <div class="info-item">
+                            <span>✓</span>
+                            Entrenamientos personalizados
+                        </div>
+
+                        <div class="info-item">
+                            <span>✓</span>
+                            Acceso a nuestras instalaciones
+                        </div>
+
+                        <div class="info-item">
+                            <span>✓</span>
+                            Diferentes planes disponibles
+                        </div>
+
+                        <div class="info-item">
+                            <span>✓</span>
+                            Atención personalizada
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <form id="clientForm">
+
+                    <div class="form-title">
+
+                        <div class="form-icon">
+                            +
+                        </div>
+
+                        <h2>
+                            Registro de cliente
+                        </h2>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="nombre">
+                            NOMBRE COMPLETO
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nombre"
+                            placeholder="Ej. Carlos López"
+                            required>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="edad">
+                            EDAD
+                        </label>
+
+                        <input
+                            type="number"
+                            id="edad"
+                            min="13"
+                            max="100"
+                            placeholder="Ej. 25"
+                            required>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="telefono">
+                            TELÉFONO
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="telefono"
+                            placeholder="1234-5678"
+                            required>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="correo">
+                            CORREO ELECTRÓNICO
+                        </label>
+
+                        <input
+                            type="email"
+                            id="correo"
+                            placeholder="ejemplo@gmail.com"
+                            required>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="plan">
+                            SELECCIONA TU PLAN
+                        </label>
+
+                        <select id="plan" required>
+
+                            <option value="">
+                                Selecciona un plan
+                            </option>
+
+                            <option value="Básico - Q150">
+                                Básico - Q150 / mes
+                            </option>
+
+                            <option value="Pro - Q250">
+                                Pro - Q250 / mes
+                            </option>
+
+                            <option value="Premium - Q350">
+                                Premium - Q350 / mes
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <button type="submit" class="btn">
+                        REGISTRARME POR WHATSAPP
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+
+                <h3>SMILE FIT</h3>
+
+                <p>
+                    Tu mejor versión comienza hoy.
+                </p>
+
+
+        </div>
+
+
+        <p class="copyright">
+            © 2026 SMILE FIT. Todos los derechos reservados.
+        </p>
+
+    </footer>
+
+
+    <script>
+
+        // ==========================================
+        // REGISTRO POR WHATSAPP
+        // ==========================================
+
+        document.getElementById("clientForm").addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            // Obtener los datos
+            const nombre = document.getElementById("nombre").value;
+            const edad = document.getElementById("edad").value;
+            const telefono = document.getElementById("telefono").value;
+            const correo = document.getElementById("correo").value;
+            const plan = document.getElementById("plan").value;
+
+
+            // Crear el mensaje
+            const mensaje =
+                " *NUEVO REGISTRO - SMILE FIT*%0A%0A" +
+                " *Nombre:* " + encodeURIComponent(nombre) + "%0A" +
+                " *Edad:* " + encodeURIComponent(edad) + "%0A" +
+                " *Teléfono:* " + encodeURIComponent(telefono) + "%0A" +
+                " *Correo:* " + encodeURIComponent(correo) + "%0A" +
+                " *Plan:* " + encodeURIComponent(plan) + "%0A%0A" +
+                " Cliente registrado desde la página web.";
+
+
+            // Tu número de WhatsApp
+            const numero = "50259947467";
+
+
+            // Crear enlace
+            const whatsapp = "https://wa.me/" + numero + "?text=" + mensaje;
+
+
+            // Abrir WhatsApp
+            window.location.href = whatsapp;
+
+        });
+
+    </script>
+
+
+    <script>
+
+        // ==========================================
+        // MENÚ RESPONSIVO
+        // ==========================================
+
+        const menuBtn = document.getElementById("menuBtn");
+        const navLinks = document.getElementById("navLinks");
+
+        if (menuBtn && navLinks) {
+
+            menuBtn.addEventListener("click", function() {
+
+                navLinks.classList.toggle("show");
+
+            });
+
+        }
+
+    </script>
+
+</body>
+
+</html>
